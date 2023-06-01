@@ -1,5 +1,9 @@
 node_modules
+<<<<<<< HEAD
 .env
 
 cache
 artifacts
+=======
+.env
+>>>>>>> fffcf85f9f73707e32c898cf2d23f8c434841d99

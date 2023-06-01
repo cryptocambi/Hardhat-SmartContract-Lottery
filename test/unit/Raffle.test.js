@@ -4,8 +4,13 @@ const { assert, expect } = require("chai")
 
 !developmentChains.includes(network.name)
     ? describe.skip
+<<<<<<< HEAD
     : describe("Raffle unit test", function () {
           let raffle, vrfCoordinatorV2Mock, raffleEntranceFee, deployer, interval
+=======
+    : describe("Raffle unit test", async function () {
+          let raffle, vrfCoordinatorV2Mock, deployer
+>>>>>>> fffcf85f9f73707e32c898cf2d23f8c434841d99
           const chainId = network.config.chainId
           beforeEach(async function () {
               deployer = (await getNamedAccounts()).deployer
