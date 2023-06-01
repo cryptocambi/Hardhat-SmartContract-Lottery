@@ -46,6 +46,13 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
         await verify(raffle.address, args)
     }
     log("----------------------------")
+
+    if (developmentChains.includes(network.name)) {
+        //const vrfCoordinatorV2Mock = await ethers.getContract("VRFCoordinatorV2Mock") from github
+        await vrfCoordinatorV2Mock.addConsumer(subscriptionId, raffle.address)
+
+        log("Consumer is added")
+    }
 }
 
 module.exports.tags = ["all", "raffle"]
