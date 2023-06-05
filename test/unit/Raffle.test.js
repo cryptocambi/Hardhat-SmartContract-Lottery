@@ -30,7 +30,7 @@ const { assert, expect } = require("chai")
               })
               it("records player when they enter", async () => {
                   await raffle.enterRaffle({ value: raffleEntranceFee })
-                  const playerFromContract = await raffle.getPlayers(0)
+                  const playerFromContract = await raffle.getPlayer(0)
                   assert.equal(playerFromContract, deployer)
               })
               it("emits event on Enter", async () => {
