@@ -28,6 +28,11 @@ module.exports = {
             accounts: [PRIVATE_KEY],
         },
     },
+    etherscan: {
+        apiKey: {
+            sepolia: "7S6BRMF83C5TY4VX2SFIAGZAXIX4NPQ5D4",
+        },
+    },
     gasReporter: {
         enabled: false,
         currency: "USD",
@@ -35,7 +40,19 @@ module.exports = {
         noColors: true,
         // coinmarketcap: COINMARKETCAP_API_KEY,
     },
-    solidity: "0.8.7",
+    solidity: {
+        compilers: [
+            {
+                version: "0.8.7",
+            },
+            {
+                version: "0.8.0",
+            },
+            {
+                version: "0.8.4",
+            },
+        ],
+    },
     namedAccounts: {
         deployer: {
             default: 0,
